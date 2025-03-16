@@ -1,0 +1,19 @@
+# RAG Configuration
+# Configuration for the Retrieval-Augmented Generation system
+
+# LLM Configuration
+#llm_model: "nemotron-mini"  # Nom du modèle Ollama à utiliser
+llm_model: "llama3" 
+max_length: 1024            # Longueur maximale des réponses
+temperature: 0.7            # Température pour la génération (0.0-1.0)
+
+# Embedding Configuration
+embeddings_model: "sentence-transformers/all-MiniLM-L6-v2"  # Modèle d'embeddings à utiliser
+
+# Document Processing
+chunk_size: 1000            # Taille des chunks en caractères
+chunk_overlap: 100          # Chevauchement entre les chunks
+
+# Storage Configuration
+persist_directory: "faiss_index"  # Répertoire pour stocker l'index vectoriel
+data_directory: "data"            # Répertoire contenant les documents à indexer
